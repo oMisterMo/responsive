@@ -1,12 +1,26 @@
 * {
     box-sizing: border-box;
+    font: inherit;
+
+    /* margin: 0;
+    padding: 0; */
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 html {
+    color-scheme: dark light;
     color: var(--primary-text-color);
     font-size: 100%;
     font-family: "PT Sans", "Helvetica Neue", Arial, "PingFang SC",
         "microsoft yahei", "hiragino sans gb", sans-serif;
+}
+
+body {
+    min-height: 100vh;
 }
 
 header,
@@ -46,10 +60,16 @@ p {
     padding: 1rem;
 }
 
-img {
-    border-style: none;
+img,
+picture,
+svg,
+video {
     display: block;
     max-width: 100%;
+}
+
+img {
+    border-style: none;
 }
 
 .text-center {
